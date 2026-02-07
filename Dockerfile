@@ -6,6 +6,9 @@ COPY portfolio-backend/ ./portfolio-backend/
 
 WORKDIR /app/portfolio-backend
 
+# 🔧 FIX: give execute permission to mvnw
+RUN chmod +x mvnw
+
 RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8081
